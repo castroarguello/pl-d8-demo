@@ -54,3 +54,17 @@ services:
       MYSQL_DATABASE: drupal8_example
     volumes:
       - /data/d8/mysql:/var/lib/mysql
+
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile-node
+    network_mode: "bridge"
+    working_dir: /var/www/src/ui
+    command: npm start
+    volumes:
+      - .:/var/www/
+      - /data/d8/node_modules:/var/www/src/ui/node_modules
+    ports:
+      - "4200:4200"
+      - "49153:49153"
