@@ -1,0 +1,2 @@
+FROM outrigger/build:php70
+RUN yum install -y mc nmap net-tools

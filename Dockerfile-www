@@ -1,0 +1,2 @@
+FROM phase2/apache-php:php70
+RUN yum install -y mc nmap net-tools
