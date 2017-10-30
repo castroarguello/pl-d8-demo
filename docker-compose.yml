@@ -6,7 +6,9 @@ version: '2.1'
 services:
   # Container to run Apache/PHP
   www:
-    image: phase2/apache-php:php70
+    build:
+      context: .
+      dockerfile: Dockerfile-www
     network_mode: "bridge"
     container_name: drupal8_www
     environment:

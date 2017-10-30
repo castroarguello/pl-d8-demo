@@ -1,6 +1,6 @@
 {
-  "name": "outrigger/drupal8-example",
-  "description": "Outrigger Drupal 8 Example Project",
+  "name": "drupal8",
+  "description": "Drupal 8 Project",
   "repositories": [
     {
       "type": "composer",
@@ -10,10 +10,10 @@
   "require": {
     "composer/installers": "^1.0.20",
     "drupal-composer/drupal-scaffold": "^2.0.1",
-    "cweagans/composer-patches": "~1.0",
+    "cweagans/composer-patches": "^1.6",
     "drupal/lightning": "~2.2.0",
     "roave/security-advisories": "dev-master",
-    "drupal/components": "^1.0",
+    "drupal/core": "~8.0",
     "drupal/devel": "^1.0@RC",
     "drupal/twig_tweak": "^1.6"
   },

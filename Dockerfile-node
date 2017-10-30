@@ -1,2 +1,2 @@
 FROM node:latest
-RUN npm install -g @angular/cli
+RUN npm install -g --unsafe-perm @angular/cli
