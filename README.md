@@ -4,40 +4,33 @@
 
 Proceed through these steps from the root of the repo:
 
-### 1. Use the build container to run composer to fetch a copy of Drupal 8 and store it in `./build/html` with:
+### 1. Build and Start the Apache/PHP / MariaDB / Angular containers with:
 
-  - `docker-compose -f build.yml run --rm composer-install`
+  - `docker-compose build && docker-compose up -d`
 
-The --rm portion of the comand ensures that containers are cleaned up after they exit so you don't need to later do a `docker rm CONTAINER_ID` command
+### 2. Use the build script to run npm / composer to fetch a copy of Drupal 8 / grunt and store it in `./build/html` with:
 
-### 2. Start the Apache/PHP and MariaDB containers with:
+  - `sh ./bin/septup.sh`
 
-  - `docker-compose up`
-
-### 3. Start a new terminal:
-
-  - We leave the old terminal running `docker-compose up` so that we can see any log messages from within the containers.
-  - Be sure it has your Dev Tools environment configured. If not run `eval "$(rig config)"`
-
-### 4. Ensure the installer has permissions to create the settings files and files directory with:
+### 3. Ensure the installer has permissions to create the settings files and files directory with:
 
   - `docker-compose exec www cp /var/www/build/html/sites/default/default.settings.php /var/www/build/html/sites/default/settings.php`
   - `docker-compose exec www chown -R apache:apache /var/www/build/html/sites/default`
 
-### 5. You should be able to load the Drupal 8 installer by navigating to:
+### 4. You should be able to load the Drupal 8 installer by navigating to:
 
   - http://www.d8.vm/
 
-### 6. Proceed through the installation
+### 5. Proceed through the installation
 
-### 7. Configure the database
+### 6. Configure the database
 
   - Database name: drupal8_example
   - Database user: admin
   - Database password: admin
   - Database host: db.d8.vm
 
-### 8. Copy custom theme into Drupal
+### 7. Copy custom theme into Drupal
 
   - For now, we have to manually copy src/PL2-BEM to build/html/themes/custom/
 

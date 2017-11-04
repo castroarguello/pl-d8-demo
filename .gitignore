@@ -1,5 +1,6 @@
 build/
-
+node_modules/
+src/sites/default/files/
 npm-debug.log
 vendor
 console
