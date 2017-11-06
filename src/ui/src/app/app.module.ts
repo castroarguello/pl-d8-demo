@@ -2,12 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NgbdAccordionBasic } from './accordion-basic';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-    NgbdAccordionBasic,
     AppComponent
   ],
   imports: [
