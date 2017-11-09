@@ -1,25 +1,38 @@
-import { Injectable } from '@angular/core';
+import { NgModule, Component, Injectable } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { HttpModule, Http, Response } from '@angular/http';
+import 'rxjs/Rx';
 import { Article } from './article';
 
-export const ARTICLES: Article[] = [
-  { id: 11, title: 'Mr. Nice' },
-  { id: 12, title: 'Narco' },
-  { id: 13, title: 'Bombasto' },
-  { id: 14, title: 'Celeritas' },
-  { id: 15, title: 'Magneta' },
-  { id: 16, title: 'RubberMan' },
-  { id: 17, title: 'Dynama' },
-  { id: 18, title: 'Dr IQ' },
-  { id: 19, title: 'Magma' },
-  { id: 20, title: 'Tornado' }
-];
 
 @Injectable()
 export class ArticleService {
-  // getArticles(): Promise<Article[]> {
-  //   return Promise.resolve(ARTICLES);
-  // }
-  getArticles(): Article[] {
-    return ARTICLES;
+  apiRoot: string = 'http://172.17.0.4/jsonapi/node/';
+  results: Object[];
+  loading: boolean;
+
+  constructor(private http: Http) {
+    this.results = [];
+    this.loading = false;
+  }
+
+  getNodes(contentType: string) {
+    let promise = new Promise((resolve, reject) => {
+      let apiURL = this.apiRoot + contentType;
+      this.http.get(apiURL)
+        .toPromise()
+        .then(
+        res => { // Success
+          this.results = res.json().data;
+          console.log(this.results);
+          resolve();
+        },
+        msg => { // Error
+          reject(msg);
+        }
+        );
+    });
+    return promise;
   }
 }

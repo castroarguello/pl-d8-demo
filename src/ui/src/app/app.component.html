@@ -1,74 +1,41 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <ul class="articles-list">
-    <li *ngFor="let article of articles">
-      <span class="badge">{{article.id}}</span> {{article.title}}
-    </li>
-  </ul>
-<div class="jumbotron">
-  <div class="container">
-    <ngb-alert type="success" [dismissible]="false">
-      Bootstrap is working!
-    </ngb-alert>
+<div class="site-wrapper">
 
-    <h1>
-      <i class="fa fa-bath" aria-hidden="true"></i>
-      And so is Font Awesome!
-    </h1>
-  </div>
-</div>
-<div class="container">
-  <p>
-    A progress bar:
-    <ngb-progressbar showValue="true" type="success" [value]="65">
-    </ngb-progressbar>
-  </p>
-</div>
+  <div class="site-wrapper-inner">
 
-<div class="container">
-  <ngb-tabset>
-    <ngb-tab title="Bacon">
-        <ng-template ngbTabContent>
-          <p class="mt-4">Content for tab 1.
-            <button type="button"
-                    class="btn btn-secondary"
-                    placement="bottom"
-                    ngbPopover="A popover in tab 1"
-                    popoverTitle="Bacon is good">
-              Click me
-            </button>
-          </p>
-        </ng-template>
-      </ngb-tab>
-      <ngb-tab title="Lettuce">
-        <ng-template ngbTabContent>
-          <p>Content for tab 2</p>
-        </ng-template>
-      </ngb-tab>
-      <ngb-tab title="Tomatoes">
-        <ng-template ngbTabContent>
-          <p>Content for tab 3</p>
-        </ng-template>
-      </ngb-tab>
-    </ngb-tabset>
-  <div class="col">
-    <div ngbDropdown class="d-inline-block">
-      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button class="dropdown-item">Action - 1</button>
-        <button class="dropdown-item">Another Action</button>
-        <button class="dropdown-item">Something else is here</button>
+    <div class="cover-container">
+
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">{{title}}</h3>
+          <nav class="nav nav-masthead">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="inner cover">
+        <h1 class="cover-heading">{{title}}.</h1>
+        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+      </div>
+      <div class="text-center">
+        <div class="loader" *ngIf="loading"></div>
+      </div>
+      <ul class="articles-list">
+        <li *ngFor="let article of articleService.results">
+          <h3><span class="badge badge-default">{{article.type}} </span>  {{article.attributes.nid}} {{article.attributes.title}}</h3>
+        </li>
+      </ul>
+
+      <div class="mastfoot">
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
       </div>
     </div>
   </div>
-
-  <button type="button" class="btn btn-outline-secondary" placement="top"
-          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Popover on top">
-    Popover on top
-  </button>
-</div>
-
 </div>

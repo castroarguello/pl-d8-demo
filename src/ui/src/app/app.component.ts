@@ -11,17 +11,17 @@ import { Article } from './article';
 
 export class AppComponent implements OnInit {
   title = 'D8 + Angular';
-  articles: Article[];
+  articles: Object[];
+  private loading: boolean = false;
 
   constructor(private articleService: ArticleService) { }
 
   getArticles(): void {
-    this.articles = this.articleService.getArticles();
-    //.then(articles => this.articles = articles);
+    this.loading = true;
+    this.articleService.getNodes('article').then( () => this.loading = false);
   }
 
   ngOnInit(): void {
     this.getArticles();
-    this.title = 'Test';
   }
 }
