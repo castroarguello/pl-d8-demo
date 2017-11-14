@@ -25,7 +25,7 @@ export class ArticleService {
         .then(
         res => { // Success
           this.results = res.json().data;
-          console.log(this.results);
+          //console.log(this.results);
           resolve();
         },
         msg => { // Error
