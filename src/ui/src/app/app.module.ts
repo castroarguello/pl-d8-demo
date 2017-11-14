@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpModule} from '@angular/http';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     BrowserModule,
     NgbModule.forRoot(),
     HttpModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
