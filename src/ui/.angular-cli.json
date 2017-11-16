@@ -56,7 +56,7 @@
     }
   },
   "defaults": {
-    "styleExt": "scss",
+    "styleExt": [ "scss", "css"],
     "class": {
       "spec": false
     },
