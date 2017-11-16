@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-darker fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">{{ title }}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,11 +51,11 @@
       </p>
     </div>
     <div class="text-center">
-      <div class="loader" *ngIf="loading"></div>
+      <div class="loader text-light border-secondary rounded-circle" *ngIf="loading"></div>
     </div>
-    <ul class="list-group articles-list">
+    <ul class="list-group articles-list ">
 
-      <li *ngFor="let article of articleService.results" class="list-group-item">
+      <li *ngFor="let article of articleService.results" class="list-group-item bg-secondary text-light">
         <span class="badge badge-success">{{article.type}} </span>
         {{article.attributes.nid}}
         <h3>{{article.attributes.title}}</h3>
@@ -64,7 +64,7 @@
 
     <div class="mastfoot">
       <div class="inner">
-        <p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        <p>Footer text here.</p>
       </div>
     </div>
   </div>

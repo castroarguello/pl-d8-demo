@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Renderer2 } from '@angular/core';
 import { ArticleService } from './article.service';
 import { Article } from './article';
 
@@ -14,7 +15,10 @@ export class AppComponent implements OnInit {
   articles: Object[];
   private loading: boolean = false;
 
-  constructor(private articleService: ArticleService) { }
+  constructor(private articleService: ArticleService, private renderer: Renderer2) {
+    this.renderer.addClass(document.body, 'bg-dark');
+    this.renderer.addClass(document.body, 'text-white');
+  }
 
   getArticles(): void {
     this.loading = true;
