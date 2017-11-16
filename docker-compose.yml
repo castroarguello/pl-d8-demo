@@ -11,6 +11,7 @@ services:
       dockerfile: Dockerfile-www
     network_mode: "bridge"
     container_name: drupal8_www
+    working_dir: /var/www/build/html
     environment:
       DOCROOT: /var/www/build/html
       # Change some core container settings
