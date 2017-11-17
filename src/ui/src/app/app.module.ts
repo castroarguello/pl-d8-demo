@@ -28,7 +28,7 @@ const routes: Routes = [
     BrowserModule,
     NgbModule.forRoot(),
     HttpModule,
-    RouterModule.forRoot(routes, { enableTracing: true } )
+    RouterModule.forRoot(routes)
   ],
   providers: [ArticleService],
   bootstrap: [AppComponent]
