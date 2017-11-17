@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { HttpModule, Http, Response } from '@angular/http';
 import 'rxjs/Rx';
-import { Article } from './article';
 
 
 @Injectable()
