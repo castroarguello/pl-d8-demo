@@ -1,0 +1,30 @@
+<div class="site-wrapper container">
+
+  <div class="site-wrapper-inner ">
+
+    <div class="inner cover">
+      <h1 class="cover-heading">{{title}}.</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p class="lead">
+        <a href="#" class="btn btn-lg btn-secondary">Pretium aenean</a>
+      </p>
+    </div>
+    <div class="text-center">
+      <div class="loader text-light border-secondary rounded-circle" *ngIf="loading"></div>
+    </div>
+    <ul class="list-group articles-list ">
+
+      <li *ngFor="let article of articleService.results" class="list-group-item bg-secondary text-light">
+        <span class="badge badge-success">{{article.type}} </span>
+        {{article.attributes.nid}}
+        <h3>{{article.attributes.title}}</h3>
+      </li>
+    </ul>
+
+    <div class="mastfoot">
+      <div class="inner">
+        <p>Pretium lectus quam id leo in vitae.</p>
+      </div>
+    </div>
+  </div>
+</div>
