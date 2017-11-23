@@ -7,9 +7,9 @@ import { HttpModule} from '@angular/http';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { RouterModule, Routes } from '@angular/router';
 
-import { NotFoundComponent } from './not-found/not-found.component';
-import { HomeComponent } from './home/home.component';
-import { ArticleService } from './article.service';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomeComponent } from './components/home/home.component';
+import { ArticleService } from './services/article.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -33,4 +33,3 @@ const routes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-platformBrowserDynamic().bootstrapModule(AppModule);
