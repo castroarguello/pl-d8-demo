@@ -1,0 +1,14 @@
+uuid: 69bc9e30-ec38-4c51-b289-17b52a881f1e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - gmartin.php@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

@@ -794,4 +794,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/default/files/config_9gSGsVhUJz03FetwHcuDr4YSMI69uMgisqYxNx1h6bQhvpZwJzL2uW7RfIl8XTAeUHIsrWS4dA/sync';
+$config_directories['sync'] = '../../src/config';
