@@ -1,0 +1,28 @@
+uuid: d8d2cd19-d1f6-41a5-9aef-c599fdf97d16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_composers
+    - node.type.composer
+    - node.type.production
+id: node.production.field_composers
+field_name: field_composers
+entity_type: node
+bundle: production
+label: Composers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      composer: composer
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

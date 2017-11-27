@@ -1,0 +1,34 @@
+uuid: 242bf718-1e1b-463b-81cf-9a4d0a425f4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.track.field_audio
+    - field.field.paragraph.track.field_title
+    - paragraphs.paragraphs_type.track
+  module:
+    - file
+id: paragraph.track.default
+targetEntityType: paragraph
+bundle: track
+mode: default
+content:
+  field_audio:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,31 @@
+uuid: f4049e42-e48a-4f54-be44-3a9a93e5f89e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.track.field_audio
+    - field.field.paragraph.track.field_title
+    - paragraphs.paragraphs_type.track
+  module:
+    - file
+id: paragraph.track.default
+targetEntityType: paragraph
+bundle: track
+mode: default
+content:
+  field_audio:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

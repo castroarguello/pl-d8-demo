@@ -1,0 +1,22 @@
+uuid: 59939589-482e-4911-af76-bab96670e240
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.production
+  module:
+    - text
+id: node.production.body
+field_name: body
+entity_type: node
+bundle: production
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
