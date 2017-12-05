@@ -1,0 +1,41 @@
+uuid: 0dadcc6e-86ea-4049-8538-8e405bb130b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.noticia.body
+    - field.field.node.noticia.field_img
+    - field.field.node.noticia.field_prod
+    - node.type.noticia
+  module:
+    - image
+    - text
+    - user
+id: node.noticia.teaser
+targetEntityType: node
+bundle: noticia
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_img:
+    label: hidden
+    weight: -4
+    type: image
+    settings:
+      image_style: ''
+      image_link: content
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_prod: true

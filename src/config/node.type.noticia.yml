@@ -1,0 +1,11 @@
+uuid: 91276daf-e642-44f0-a356-35f3447e901b
+langcode: en
+status: true
+dependencies: {  }
+name: News
+type: noticia
+description: 'News related to -97db.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

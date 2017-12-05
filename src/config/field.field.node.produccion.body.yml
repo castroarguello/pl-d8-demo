@@ -1,0 +1,22 @@
+uuid: 9dcd7023-084e-4758-af22-cdc4f790d361
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.produccion
+  module:
+    - text
+id: node.produccion.body
+field_name: body
+entity_type: node
+bundle: produccion
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

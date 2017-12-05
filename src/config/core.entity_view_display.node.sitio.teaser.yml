@@ -1,0 +1,44 @@
+uuid: f4733a3e-f055-4ef0-8d4f-3e669bf0e115
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sitio.body
+    - field.field.node.sitio.comment_node_sitio
+    - field.field.node.sitio.field_link
+    - node.type.sitio
+  module:
+    - link
+    - text
+    - user
+id: node.sitio.teaser
+targetEntityType: node
+bundle: sitio
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_link:
+    label: above
+    weight: 31
+    type: link
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  comment_node_sitio: true

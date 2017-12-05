@@ -1,0 +1,22 @@
+uuid: bda097d4-08cf-4389-b2f4-fd48dbc5b87b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sitio
+id: node.sitio.status
+field_name: status
+entity_type: node
+bundle: sitio
+label: 'Publishing status'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

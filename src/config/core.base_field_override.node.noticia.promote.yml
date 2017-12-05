@@ -1,0 +1,22 @@
+uuid: cd73237c-c49e-43a6-b38e-b3d38f74f0b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.noticia
+id: node.noticia.promote
+field_name: promote
+entity_type: node
+bundle: noticia
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

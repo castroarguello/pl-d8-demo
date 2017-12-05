@@ -1,0 +1,20 @@
+uuid: 500dd595-cdbd-4645-8cb5-06849a832dd6
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - rubik
+id: system_1
+theme: rubik
+region: ''
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

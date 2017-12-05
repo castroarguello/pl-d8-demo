@@ -1,0 +1,19 @@
+uuid: 19c91667-ab20-405a-8a90-b1ae54fb78da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_foto
+    - node.type.produccion
+id: node.produccion.field_foto
+field_name: field_foto
+entity_type: node
+bundle: produccion
+label: Photography
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

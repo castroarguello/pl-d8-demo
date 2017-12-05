@@ -1,0 +1,21 @@
+uuid: d90d4eb6-dd38-407e-bd7f-7eaac90a9fa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dir
+    - node.type.produccion
+  module:
+    - text
+id: node.produccion.field_dir
+field_name: field_dir
+entity_type: node
+bundle: produccion
+label: Direction
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

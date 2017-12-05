@@ -1,0 +1,22 @@
+uuid: 3df80900-31e4-48a8-a22d-4b21b6c79f5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.produccion
+id: node.produccion.status
+field_name: status
+entity_type: node
+bundle: produccion
+label: 'Publishing status'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

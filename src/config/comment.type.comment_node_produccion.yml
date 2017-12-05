@@ -1,0 +1,8 @@
+uuid: 35f9e923-370f-48f3-8f63-004d7a041be4
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_produccion
+label: 'Production comment'
+target_entity_type_id: node
+description: null

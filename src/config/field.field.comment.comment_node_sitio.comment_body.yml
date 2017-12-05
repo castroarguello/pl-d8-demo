@@ -1,0 +1,21 @@
+uuid: fb006d47-37bb-4a2f-8c67-d9b7f39b0105
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_sitio
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_sitio.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_sitio
+label: Comment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

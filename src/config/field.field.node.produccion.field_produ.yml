@@ -1,0 +1,19 @@
+uuid: 2c444735-9a53-4b99-baef-7a709c5b6985
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_produ
+    - node.type.produccion
+id: node.produccion.field_produ
+field_name: field_produ
+entity_type: node
+bundle: produccion
+label: Production
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

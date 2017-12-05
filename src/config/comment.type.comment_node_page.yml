@@ -1,0 +1,8 @@
+uuid: 0b7cdd62-10ec-435b-88e1-7ed32c0ecf36
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_page
+label: 'Page comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,21 @@
+uuid: a48110d1-0bc1-456c-8485-0f74dab400a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_origen
+    - node.type.produccion
+id: node.produccion.field_origen
+field_name: field_origen
+entity_type: node
+bundle: produccion
+label: Origin
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Córdoba, Argentina'
+default_value_callback: ''
+settings: {  }
+field_type: string

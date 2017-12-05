@@ -1,0 +1,24 @@
+uuid: 522a7487-730e-47a5-b3d7-57aacfe6bc3a
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - gcustom
+id: user_7
+theme: gcustom
+region: ''
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: ''
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,28 @@
+uuid: 628c1133-c1d1-494b-ab50-db6861c1d5ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.compositor.body
+    - node.type.compositor
+  module:
+    - text
+    - user
+id: node.compositor.teaser
+targetEntityType: node
+bundle: compositor
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

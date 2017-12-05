@@ -1,0 +1,19 @@
+uuid: 776cebca-3576-40ac-a8c1-9b5a6e1d223e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sonido
+    - node.type.produccion
+id: node.produccion.field_sonido
+field_name: field_sonido
+entity_type: node
+bundle: produccion
+label: Sound
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

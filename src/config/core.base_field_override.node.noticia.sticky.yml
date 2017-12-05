@@ -1,0 +1,22 @@
+uuid: e8a880d1-ddd5-4969-afa3-dea756a5d3f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.noticia
+id: node.noticia.sticky
+field_name: sticky
+entity_type: node
+bundle: noticia
+label: 'Sticky at the top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

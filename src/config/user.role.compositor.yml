@@ -1,0 +1,25 @@
+uuid: f02eb441-40b9-47e2-8bbb-1111419ff67e
+langcode: en
+status: true
+dependencies: {  }
+id: compositor
+label: compositor
+weight: 3
+is_admin: null
+permissions:
+  - 'access backup and migrate'
+  - 'access content'
+  - 'create compositor content'
+  - 'create noticia content'
+  - 'create produccion content'
+  - 'create sitio content'
+  - 'delete own compositor content'
+  - 'delete own noticia content'
+  - 'delete own produccion content'
+  - 'delete own sitio content'
+  - 'edit any compositor content'
+  - 'edit any noticia content'
+  - 'edit any produccion content'
+  - 'edit any sitio content'
+  - 'perform backup'
+  - 'view simplemenu'

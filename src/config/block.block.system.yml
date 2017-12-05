@@ -1,0 +1,20 @@
+uuid: c4370e60-5aea-4579-ac63-862f7ea217d6
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - tao
+id: system
+theme: tao
+region: ''
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,33 @@
+uuid: 18297cb6-6516-4c7f-8198-899841341a30
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.noticia.body
+    - field.field.node.noticia.field_img
+    - field.field.node.noticia.field_prod
+    - node.type.noticia
+  module:
+    - image
+    - user
+id: node.noticia.rss
+targetEntityType: node
+bundle: noticia
+mode: rss
+content:
+  field_img:
+    label: hidden
+    weight: -4
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_prod: true

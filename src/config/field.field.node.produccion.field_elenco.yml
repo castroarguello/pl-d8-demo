@@ -1,0 +1,19 @@
+uuid: 609c27d9-d23a-495f-8e72-19487fee70db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_elenco
+    - node.type.produccion
+id: node.produccion.field_elenco
+field_name: field_elenco
+entity_type: node
+bundle: produccion
+label: Cast
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

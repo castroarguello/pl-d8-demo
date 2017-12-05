@@ -1,0 +1,20 @@
+uuid: 7f091f2b-02b5-459d-9669-f3bea1f92ebb
+langcode: en
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - rubik
+id: user_2
+theme: rubik
+region: ''
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility: {  }

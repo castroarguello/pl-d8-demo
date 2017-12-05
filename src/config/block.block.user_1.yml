@@ -1,0 +1,24 @@
+uuid: d1c05c09-35cd-44e9-82d0-daf101316062
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - tao
+id: user_1
+theme: tao
+region: ''
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: ''
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

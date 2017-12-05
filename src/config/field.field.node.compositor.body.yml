@@ -1,0 +1,22 @@
+uuid: 97a28352-67bb-4f05-af15-3a52d75b789e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.compositor
+  module:
+    - text
+id: node.compositor.body
+field_name: body
+entity_type: node
+bundle: compositor
+label: Biography
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

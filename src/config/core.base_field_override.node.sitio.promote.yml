@@ -1,0 +1,22 @@
+uuid: b328e7ec-c4f1-4ef6-8385-5ace6b88bfb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sitio
+id: node.sitio.promote
+field_name: promote
+entity_type: node
+bundle: sitio
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

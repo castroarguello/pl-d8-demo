@@ -1,0 +1,20 @@
+uuid: 301f4e94-98c4-47d3-830b-4ce0585ccb8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_sitio
+field_name: comment_node_sitio
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_sitio
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 53af131b-aac0-4a99-b6ba-f50870dff665
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.produccion
+  module:
+    - video_embed_field
+id: node.produccion.field_video
+field_name: field_video
+entity_type: node
+bundle: produccion
+label: Video
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    youtube: youtube
+    vimeo: vimeo
+    youtube_playlist: '0'
+field_type: video_embed_field

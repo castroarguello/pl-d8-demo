@@ -1,0 +1,11 @@
+uuid: b76e9141-8587-415e-8803-70aae5946185
+langcode: en
+status: true
+dependencies: {  }
+name: Sites
+type: sitio
+description: 'Friend Sites.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

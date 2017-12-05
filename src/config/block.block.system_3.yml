@@ -1,0 +1,20 @@
+uuid: 0499acda-2914-4982-ab15-3156a5d5354c
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - gcustom
+id: system_3
+theme: gcustom
+region: ''
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: fa248c81-dbb6-494a-8b1a-ccb7ae94cd31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_compositor
+    - node.type.produccion
+id: node.produccion.field_compositor
+field_name: field_compositor
+entity_type: node
+bundle: produccion
+label: 'Original Music'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

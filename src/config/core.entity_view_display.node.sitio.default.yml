@@ -1,0 +1,52 @@
+uuid: d2dd9e51-04df-42b5-aa7f-ce3b824a88ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_sitio.default
+    - field.field.node.sitio.body
+    - field.field.node.sitio.comment_node_sitio
+    - field.field.node.sitio.field_link
+    - node.type.sitio
+  module:
+    - comment
+    - link
+    - text
+    - user
+id: node.sitio.default
+targetEntityType: node
+bundle: sitio
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_sitio:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_link:
+    label: above
+    weight: 31
+    type: link
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

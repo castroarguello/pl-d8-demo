@@ -1,0 +1,22 @@
+uuid: 33022682-eff5-44f9-b96d-4f371135934c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.compositor
+id: node.compositor.sticky
+field_name: sticky
+entity_type: node
+bundle: compositor
+label: 'Sticky at the top of lists'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

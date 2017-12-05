@@ -1,0 +1,11 @@
+uuid: 8e219c71-916d-4416-9702-bcafeb144d07
+langcode: en
+status: true
+dependencies: {  }
+name: Composer
+type: compositor
+description: 'Composers from -97db.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

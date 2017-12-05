@@ -1,0 +1,22 @@
+uuid: 946834f1-a456-47df-a8b0-7a9d2b009f5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.compositor
+id: node.compositor.status
+field_name: status
+entity_type: node
+bundle: compositor
+label: 'Publishing status'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,25 @@
+uuid: 76f5ed22-4200-4f9f-b3d2-6228dcf22ccc
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_compositor
+    - field.field.comment.comment_node_compositor.comment_body
+  module:
+    - text
+id: comment.comment_node_compositor.default
+targetEntityType: comment
+bundle: comment_node_compositor
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

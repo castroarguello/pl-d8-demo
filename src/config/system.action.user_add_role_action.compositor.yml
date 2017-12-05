@@ -1,0 +1,14 @@
+uuid: 15e03a8a-5281-4d13-bc45-6023d6235434
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.compositor
+  module:
+    - user
+id: user_add_role_action.compositor
+label: 'Add the compositor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: compositor

@@ -1,0 +1,21 @@
+uuid: 98f589d0-5f78-485d-bdac-da3729dcb52c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_format
+    - node.type.produccion
+id: node.produccion.field_format
+field_name: field_format
+entity_type: node
+bundle: produccion
+label: Format
+description: "16mm, Color\r\nHD"
+required: false
+translatable: true
+default_value:
+  -
+    value: HD
+default_value_callback: ''
+settings: {  }
+field_type: string

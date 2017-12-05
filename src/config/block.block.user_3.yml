@@ -1,0 +1,24 @@
+uuid: 21cd1a2f-734b-444c-a605-cd56437c5f9f
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - rubik
+id: user_3
+theme: rubik
+region: ''
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: ''
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

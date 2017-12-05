@@ -1,0 +1,88 @@
+uuid: 0f16c092-3743-4d97-bd68-281c50207e44
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.produccion.body
+    - field.field.node.produccion.comment_node_produccion
+    - field.field.node.produccion.field_bso
+    - field.field.node.produccion.field_compositor
+    - field.field.node.produccion.field_dir
+    - field.field.node.produccion.field_elenco
+    - field.field.node.produccion.field_format
+    - field.field.node.produccion.field_foto
+    - field.field.node.produccion.field_img_p
+    - field.field.node.produccion.field_inst
+    - field.field.node.produccion.field_origen
+    - field.field.node.produccion.field_produ
+    - field.field.node.produccion.field_sonido
+    - field.field.node.produccion.field_video
+    - field.field.node.produccion.field_website
+    - field.field.node.produccion.field_year
+    - node.type.produccion
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.produccion.rss
+targetEntityType: node
+bundle: produccion
+mode: rss
+content:
+  field_compositor:
+    label: above
+    weight: 14
+    type: entity_reference_label
+    settings:
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_dir:
+    label: above
+    weight: 9
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_img_p:
+    label: above
+    weight: -4
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_inst:
+    label: above
+    weight: 15
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_year:
+    label: above
+    weight: 6
+    type: datetime_default
+    settings:
+      format_type: fallback
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment_node_produccion: true
+  field_bso: true
+  field_elenco: true
+  field_format: true
+  field_foto: true
+  field_origen: true
+  field_produ: true
+  field_sonido: true
+  field_video: true
+  field_website: true

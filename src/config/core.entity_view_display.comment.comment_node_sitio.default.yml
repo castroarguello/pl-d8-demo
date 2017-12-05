@@ -1,0 +1,25 @@
+uuid: 1d164e9c-005f-4d39-ae2e-f00998b5f60e
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_sitio
+    - field.field.comment.comment_node_sitio.comment_body
+  module:
+    - text
+id: comment.comment_node_sitio.default
+targetEntityType: comment
+bundle: comment_node_sitio
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

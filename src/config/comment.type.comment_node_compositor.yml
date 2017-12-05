@@ -1,0 +1,8 @@
+uuid: 4e341f94-60ff-45e2-9644-eb40f0701e86
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_compositor
+label: 'Composer comment'
+target_entity_type_id: node
+description: null

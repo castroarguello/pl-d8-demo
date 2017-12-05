@@ -1,0 +1,25 @@
+uuid: ed661e27-0ec9-4d77-9db1-e9f3ce13afb0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9bda155a-8ab5-48fe-8eae-a98247bc4fa6'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: block
+theme: bartik
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:9bda155a-8ab5-48fe-8eae-a98247bc4fa6'
+settings:
+  id: 'block_content:9bda155a-8ab5-48fe-8eae-a98247bc4fa6'
+  label: 'Original Music Composers'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

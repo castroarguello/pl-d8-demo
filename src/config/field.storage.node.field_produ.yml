@@ -1,0 +1,19 @@
+uuid: 28ec16b7-cb74-4957-932a-de5e3cd9d4dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_produ
+field_name: field_produ
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

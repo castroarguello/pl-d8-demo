@@ -1,0 +1,38 @@
+uuid: b265a64e-2794-4b62-af7e-90b1e2093e50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_img
+    - node.type.noticia
+  module:
+    - image
+id: node.noticia.field_img
+field_name: field_img
+entity_type: node
+bundle: noticia
+label: Imagen
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  file_directory: imagenes
+  max_filesize: 1m
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: 250x400
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
