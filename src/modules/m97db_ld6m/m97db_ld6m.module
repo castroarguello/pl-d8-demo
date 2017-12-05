@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains m97db_ld6m.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function m97db_ld6m_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the m97db_ld6m module.
+    case 'help.page.m97db_ld6m':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Migrate content from legacy D6 db.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

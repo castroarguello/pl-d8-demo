@@ -1,0 +1,7 @@
+name: m97db_legacy_d6_migration
+type: module
+description: Migrate content from legacy D6 db.
+core: 8.x
+package: Custom
+dependencies:
+  - migrate_tools

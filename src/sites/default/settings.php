@@ -793,5 +793,15 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
+$databases['migrate']['default'] = array (
+  'database' => 'legacy',
+  'username' => 'admin',
+  'password' => 'admin',
+  'prefix' => '',
+  'host' => 'db',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
 $settings['install_profile'] = 'standard';
 $config_directories['sync'] = '../../src/config';
