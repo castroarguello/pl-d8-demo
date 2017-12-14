@@ -1,0 +1,65 @@
+id: ld6m_node
+label: Legacy 97db Production Nodes
+migration_group: 97db_migration
+migration_tags:
+  - Drupal 6
+source:
+  plugin: legacy_productions
+  node_type: produccion
+process:
+  type:
+    plugin: default_value
+    default_value: produccion
+  nid: tnid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: "x-default"
+  title: title
+  uid:
+    plugin: default_value
+    default_value: 1
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  'body/format':
+    plugin: default_value
+    default_value: "full_html"
+  'body/value': body
+  'body/summary': teaser
+  field_video: field_video
+  field_format:
+    plugin: iterator
+    source: field_format
+    process:
+        value: value
+  field_year:
+    plugin: iterator
+    source: field_year
+    process:
+      value:
+        plugin: substr
+        source: value
+        start: 0
+        length: 4
+  field_origen: field_origen
+  field_website: field_website
+  field_dir: field_dir
+  field_elenco: field_elenco
+  field_produ: field_produ
+  field_foto: field_foto
+  field_sonido: field_sonido
+  field_compositor: field_compositor
+  field_inst: field_inst
+  field_tracks:
+    plugin: paragraph_on_the_fly
+    source: tracks
+
+
+destination:
+  plugin: entity:node
+migration_dependencies:
+  required: {}
