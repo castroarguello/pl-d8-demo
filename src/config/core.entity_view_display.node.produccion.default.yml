@@ -3,10 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_produccion.default
     - field.field.node.produccion.body
-    - field.field.node.produccion.comment_node_produccion
-    - field.field.node.produccion.field_bso
     - field.field.node.produccion.field_compositor
     - field.field.node.produccion.field_dir
     - field.field.node.produccion.field_elenco
@@ -23,8 +20,6 @@ dependencies:
     - field.field.node.produccion.field_year
     - node.type.produccion
   module:
-    - comment
-    - datetime
     - entity_reference_revisions
     - image
     - link
@@ -41,15 +36,6 @@ content:
     type: text_default
     weight: 101
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment_node_produccion:
-    label: hidden
-    type: comment_default
-    weight: 20
-    settings:
-      view_mode: default
-      pager_id: 0
     third_party_settings: {  }
     region: content
   field_compositor:
@@ -158,16 +144,15 @@ content:
     third_party_settings: {  }
     region: content
   field_year:
+    weight: 103
     label: above
-    weight: 6
-    type: datetime_default
     settings:
-      format_type: fallback
-      timezone_override: ''
+      link_to_entity: false
     third_party_settings: {  }
+    type: string
     region: content
   links:
     weight: 100
     region: content
 hidden:
-  field_bso: true
+  langcode: true

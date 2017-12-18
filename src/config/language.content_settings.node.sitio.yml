@@ -1,0 +1,11 @@
+uuid: 7575cb5d-bf40-4cdb-8a3a-95845f6a0429
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sitio
+id: node.sitio
+target_entity_type_id: node
+target_bundle: sitio
+default_langcode: site_default
+language_alterable: false

@@ -1,10 +1,10 @@
-uuid: 899a46cf-808b-449f-864d-cd91c0da2fce
+uuid: 3342af74-bdbe-48be-b31d-82f786239dd6
 langcode: en
 status: true
 dependencies: {  }
 id: 97db_migration
-label: '97db Migration'
+label: 97db_migration
 description: ''
-source_type: 'Drupal 6'
+source_type: null
 module: null
 shared_configuration: null

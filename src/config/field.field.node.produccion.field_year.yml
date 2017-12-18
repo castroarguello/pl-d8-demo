@@ -1,12 +1,10 @@
-uuid: 0bf3dffd-27f4-4545-a543-68ff95b0d392
+uuid: 914774d8-65a7-4d11-ac82-7b4c0a82938e
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_year
     - node.type.produccion
-  module:
-    - datetime
 id: node.produccion.field_year
 field_name: field_year
 entity_type: node
@@ -14,8 +12,8 @@ bundle: produccion
 label: Year
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: datetime
+field_type: string

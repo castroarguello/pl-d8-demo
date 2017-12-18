@@ -4,8 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.produccion.body
-    - field.field.node.produccion.comment_node_produccion
-    - field.field.node.produccion.field_bso
     - field.field.node.produccion.field_compositor
     - field.field.node.produccion.field_dir
     - field.field.node.produccion.field_elenco
@@ -23,9 +21,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.produccion
   module:
-    - comment
-    - datetime
-    - file
     - image
     - link
     - paragraphs
@@ -46,25 +41,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  comment_node_produccion:
-    type: comment_default
-    weight: 20
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_bso:
-    weight: 4
-    type: file_generic
-    settings:
-      progress_indicator: bar
-    third_party_settings: {  }
-    region: content
   field_dir:
     weight: 9
     type: text_textfield
@@ -164,11 +146,20 @@ content:
     third_party_settings: {  }
     region: content
   field_year:
-    weight: 6
-    type: datetime_default
-    settings: {  }
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

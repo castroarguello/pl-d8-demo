@@ -42,3 +42,4 @@ content:
     region: content
 hidden:
   comment_node_sitio: true
+  langcode: true

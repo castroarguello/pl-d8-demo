@@ -1,0 +1,11 @@
+uuid: be204cfa-95c5-45f6-90cf-e28ef0a516d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_compositor
+id: comment.comment_node_compositor
+target_entity_type_id: comment
+target_bundle: comment_node_compositor
+default_langcode: site_default
+language_alterable: false

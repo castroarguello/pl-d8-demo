@@ -22,4 +22,5 @@ permissions:
   - 'edit any produccion content'
   - 'edit any sitio content'
   - 'perform backup'
+  - 'use text format full_html'
   - 'view simplemenu'

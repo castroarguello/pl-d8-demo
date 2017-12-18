@@ -1,0 +1,11 @@
+uuid: aed79e55-5d51-4cc3-9e17-611bd96d3194
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.compositor
+id: node.compositor
+target_entity_type_id: node
+target_bundle: compositor
+default_langcode: site_default
+language_alterable: false

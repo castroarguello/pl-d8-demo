@@ -1,0 +1,11 @@
+uuid: ad2087a8-136c-496e-bdd1-6a797cf61c8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_noticia
+id: comment.comment_node_noticia
+target_entity_type_id: comment
+target_bundle: comment_node_noticia
+default_langcode: site_default
+language_alterable: false

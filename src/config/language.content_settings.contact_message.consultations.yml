@@ -1,0 +1,11 @@
+uuid: b1b0ce62-2f8d-4be2-a2f5-9a0bbed2fcab
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.consultations
+id: contact_message.consultations
+target_entity_type_id: contact_message
+target_bundle: consultations
+default_langcode: site_default
+language_alterable: false

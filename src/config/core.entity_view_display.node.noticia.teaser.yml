@@ -39,3 +39,4 @@ content:
     region: content
 hidden:
   field_prod: true
+  langcode: true

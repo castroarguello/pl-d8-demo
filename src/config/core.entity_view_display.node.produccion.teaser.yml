@@ -5,8 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.produccion.body
-    - field.field.node.produccion.comment_node_produccion
-    - field.field.node.produccion.field_bso
     - field.field.node.produccion.field_compositor
     - field.field.node.produccion.field_dir
     - field.field.node.produccion.field_elenco
@@ -17,12 +15,12 @@ dependencies:
     - field.field.node.produccion.field_origen
     - field.field.node.produccion.field_produ
     - field.field.node.produccion.field_sonido
+    - field.field.node.produccion.field_tracks
     - field.field.node.produccion.field_video
     - field.field.node.produccion.field_website
     - field.field.node.produccion.field_year
     - node.type.produccion
   module:
-    - datetime
     - image
     - link
     - text
@@ -137,18 +135,10 @@ content:
       target: '0'
     third_party_settings: {  }
     region: content
-  field_year:
-    label: above
-    weight: 6
-    type: datetime_default
-    settings:
-      format_type: fallback
-      timezone_override: ''
-    third_party_settings: {  }
-    region: content
   links:
     weight: 100
     region: content
 hidden:
-  comment_node_produccion: true
-  field_bso: true
+  field_tracks: true
+  field_year: true
+  langcode: true
