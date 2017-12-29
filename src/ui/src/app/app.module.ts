@@ -2,18 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpModule} from '@angular/http';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { RouterModule, Routes } from '@angular/router';
 
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
-import { ArticleService } from './services/article.service';
+import { AudioPlayerService } from './services/audio/audio-player.service';
+import { DataService } from './services/data.service';
+import { TrackComponent } from './components/track/track.component';
+import { ProductionComponent } from './components/production/production.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  //{ path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -21,15 +23,16 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    TrackComponent,
+    ProductionComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot(),
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ArticleService],
+  providers: [DataService, AudioPlayerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

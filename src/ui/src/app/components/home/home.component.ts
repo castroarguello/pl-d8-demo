@@ -1,27 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ArticleService } from '../../services/article.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  providers: [ArticleService]
+  providers: [DataService]
 })
 
 export class HomeComponent implements OnInit {
-  title = 'D8 + Angular';
-  articles: Object[];
+  title = '-97db <strong>Original Music</strong>';
   private loading: boolean = false;
 
-  constructor(private articleService: ArticleService, public router: Router) { }
+  constructor(private dataService: DataService) { }
 
-  getArticles(): void {
+  getProds(): void {
     this.loading = true;
-    this.articleService.getNodes('article').then( () => this.loading = false);
+    this.dataService.getLandingProductions().then( () => this.loading = false);
   }
 
   ngOnInit(): void {
-    this.getArticles();
+    this.getProds();
   }
 }

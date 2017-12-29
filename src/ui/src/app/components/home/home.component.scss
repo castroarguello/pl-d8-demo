@@ -1,3 +1,4 @@
+
 .loader {
     border: 5px solid #f3f3f3;
     -webkit-animation: spin 1s linear infinite;
@@ -10,4 +11,29 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+#home-section{
+  background:url('../../../assets/img/home-sheet.jpg') no-repeat;
+  min-height:600px;
+  background-size:cover;
+  background-attachment:fixed;
+
+  .dark-overlay{
+    background-color:rgba(0,0,0,0.5);
+    position:absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    min-height:600px;
+  }
+
+  .card-form{
+    opacity:0.8;
+  }
+
+  .fa{
+    color:white;
+    border-radius:5px;
+  }
 }

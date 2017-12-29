@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+      <app-track *ngFor="let track of tracks" [Title]="track.title" [Url]="track.url">
+      </app-track>
+    </div>
+  </div>
+</div>
