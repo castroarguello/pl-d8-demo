@@ -1,12 +1,12 @@
-<div class="container-fluid producction">
+<div class="container-fluid production">
   <div class="row">
     <div class="col-sm-4">
       <img src="{{Image}}" alt="" class="img-fluid mb-3 rounded-circle d-block mx-auto">
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-8 ">
       <h3 class="d-none d-md-block">{{Prod.attributes.title}}</h3>
       <div class="container d-none d-md-block" [innerHTML]="Prod.attributes.body.value"></div>
-      <h4>Original Music</h4>
+      <h4 class="text-center text-sm-left">Original Music</h4>
       <div class="container-fluid row justify-content-center" *ngIf="loading">
         <div class="loader text-light border-secondary rounded-circle"></div>
       </div>

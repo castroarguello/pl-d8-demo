@@ -1,0 +1,12 @@
+.production {
+  img {
+    max-height: 180px;
+  }
+}
+@media (min-width: 576px) {
+  .production {
+    img {
+      max-height: none;
+    }
+  }
+}
