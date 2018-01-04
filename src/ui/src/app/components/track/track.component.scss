@@ -1,0 +1,23 @@
+.br-5{
+  border-radius:5px;
+}
+
+.track-title {
+  max-width: 143px;
+}
+
+// @include media-breakpoint-up(md) {
+//   .track-title {
+//     max-width: none;
+//   }
+// }
+
+
+.track-play {
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.track-container.bg-dark {
+  opacity: 0.8;
+}

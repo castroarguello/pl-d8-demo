@@ -19,6 +19,7 @@
     "prefix": "app",
     "styles": [
       "../node_modules/font-awesome/css/font-awesome.min.css",
+      "assets/font-awesome-animation.min.css",
       "styles.scss"
     ],
     "scripts": [

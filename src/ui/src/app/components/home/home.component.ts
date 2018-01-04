@@ -10,7 +10,7 @@ import { DataService } from '../../services/data.service';
 })
 
 export class HomeComponent implements OnInit {
-  title = '-97db <strong>Original Music</strong>';
+  title = '<small>-97db</small> <strong>Original Music</strong>';
   private loading: boolean = false;
 
   constructor(private dataService: DataService) { }

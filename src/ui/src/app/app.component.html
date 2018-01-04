@@ -1,31 +1,23 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-darker fixed-top">
-  <div class="container">
-    <a class="navbar-brand nav-item active d-lg-none" href="/">{{ brand }}</a>
+<nav class="navbar navbar-expand-sm navbar-dark bg-darker fixed-top p-0">
+    <a routerLink="/" class="navbar-brand py-0 mx-0"><img width="24" height="24" class="img-fluid mx-1" src="../assets/img/wave-sm.png">97db<strong class="d-lg-none mr-1">Original Music</strong></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a routerLink="/features" class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/contact" class="nav-link" href="#">Contact</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+            Composers
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" routerLink="/gerardo-colinas">Gerardo Colinas</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here as content</a>
+            <a class="dropdown-item" routerLink="/german-martin">German Martin</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a routerLink="/contact" class="nav-link" href="#">Contact</a>
         </li>
       </ul>
       <!-- <form class="form-inline my-2 my-lg-0">
@@ -33,7 +25,6 @@
         <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
       </form> -->
     </div>
-  </div>
 </nav>
 
 <router-outlet></router-outlet>
@@ -45,7 +36,7 @@
             <div class="py-4">
               <span class="h4">-97db Original Music</span>
               <p>Copyright © 2018</p>
-              <button class="btn btn-secondary" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+              <button class="btn btn-secondary" routerLink="/contact">Contact Us</button>
             </div>
           </div>
         </div>

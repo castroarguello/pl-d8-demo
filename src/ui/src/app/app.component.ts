@@ -9,7 +9,7 @@ import { AudioPlayerService } from './services/audio/audio-player.service';
 })
 
 export class AppComponent implements OnInit {
-  brand = '-97db';
+  brand = '97db Original Music';
 
   constructor(private renderer: Renderer2, private player: AudioPlayerService) {
     this.renderer.addClass(document.body, 'bg-dark');
@@ -17,7 +17,5 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    var audio = 'http://techslides.com/demos/samples/sample.wav';
-    this.player.play(audio, 'Audio Title');
   }
 }
