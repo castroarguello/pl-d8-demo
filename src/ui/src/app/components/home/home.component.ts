@@ -12,12 +12,14 @@ import { DataService } from '../../services/data.service';
 export class HomeComponent implements OnInit {
   title = '<small>-97db</small> <strong>Original Music</strong>';
   private loading: boolean = false;
-
+  private loadingFeatured: boolean = false;
   constructor(private dataService: DataService) { }
 
   getProds(): void {
     this.loading = true;
     this.dataService.getLandingProductions().then( () => this.loading = false);
+    this.loadingFeatured = true;
+    this.dataService.getFeaturedMusic().then( () => this.loadingFeatured = false);
   }
 
   ngOnInit(): void {

@@ -2,10 +2,10 @@
   <div class="track-play p-2 align-self-start {{Track.class}}" (click)="playTrack($event)" *ngIf="Track.url!==''">
     <i class="fa fa-play text-white bg-dark p-1 br-5 faa-tada animated-hover"></i>
   </div>
-  <div class="p-2 align-self-start {{Track.class}}" *ngIf="Track.url==''" disabled>
+  <div class="p-2 align-self-start d-none {{Track.class}}" *ngIf="Track.url==''" disabled>
     <i class="fa fa-music text-secondary bg-dark p-1 br-5"></i>
   </div>
-  <div class="track-title p-2 align-self-end {{Track.class}}">
+  <div class="track-title p-2 align-self-end {{Track.class}}" *ngIf="Track.url!==''">
     {{Track.field_title}}
   </div>
 </div>

@@ -10,9 +10,12 @@ import { DataService } from '../../services/data.service';
 export class ProductionComponent implements OnInit {
   @Input() Prod: Object;
   @Input() Id: string;
+  @Input() Index: number;
   loading: boolean = true;
   Tracks: Object[];
   Image: string;
+  Classes: string = '';
+
 
 
 constructor(private dataService: DataService) { }
@@ -25,6 +28,12 @@ ngOnInit() {
     this.loading = false;
     }
   );
+  if (this.Index%2) {
+    this.Classes= "bg-secondary text-light";
+  }
+  else {
+    this.Classes= "bg-darkergrey text-light";
+  }
 }
 
 }

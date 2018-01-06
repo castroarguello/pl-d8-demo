@@ -19,6 +19,7 @@
   background-size:cover;
   background-attachment:fixed;
 
+
   .dark-overlay{
     background-color:rgba(0,0,0,0.5);
     position:absolute;
@@ -35,5 +36,46 @@
   .fa{
     color:white;
     border-radius:5px;
+  }
+
+#featured-tracks {
+  img {
+    max-width: 100px;
+  }
+  .track-container  {
+    .track-play, .track-tile {
+      padding-top:0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+  }
+}
+
+// Dinamic Font size.
+  .services {
+    font-size: 70%;
+  }
+  .card-body, h2:not(.h3) {
+    font-size: 80%;
+
+  }
+  h2.h3 {
+    font-size: 1.25rem;
+  }
+  @media (min-width: 320px) {
+    h2.h3 {
+      font-size: 1.55rem;
+    }
+    .services, .card-body, h2:not(.h3) {
+      font-size: 90%;
+    }
+  }
+  @media (min-width: 576px) {
+    .services, .card-body, h2:not(.h3) {
+      font-size: 100%;
+    }
+    h2.h3 {
+      font-size: 1.75rem;
+    }
   }
 }

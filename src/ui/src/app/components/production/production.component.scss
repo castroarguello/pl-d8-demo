@@ -1,12 +1,18 @@
 .production {
   img {
     max-height: 180px;
+    max-height: 215px;
   }
 }
 @media (min-width: 576px) {
   .production {
     img {
       max-height: none;
+      max-height: 215px;
     }
   }
+}
+
+.bg-darkergrey {
+  background-color: darken(#868e96, 5);
 }

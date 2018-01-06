@@ -1,39 +1,55 @@
 <header id="home-section" class="pb-5">
-    <div class="dark-overlay">
-      <div class="home-inner pt-5">
-        <div class="container">
-          <div class="row pt-2 pt-lg-5">
-            <div class="col-lg-6">
-              <h1 class="display-5 d-none d-lg-block" [innerHTML]="title"></h1>
-              <div class="d-flex flex-row">
-                <div class="p-2 p-md-3 p-lg-4 align-self-start">
-                  <i class="fa fa-film bg-secondary p-2 fa-lg"></i>
-                </div>
-                <div class="p-2 p-md-3 p-lg-4 align-self-end">
-                  Music production, composition and orchestration for <strong>Films and TV</strong>.
-                </div>
+  <div class="dark-overlay">
+    <div class="home-inner pt-5">
+      <div class="container">
+        <div class="row pt-2 pt-lg-5">
+          <div class="services col-lg-6">
+            <h1 class="display-5 d-none d-lg-block" [innerHTML]="title"></h1>
+            <div class="d-flex flex-row">
+              <div class="p-2 p-md-3 p-lg-4 align-self-start">
+                <i class="fa fa-film bg-secondary p-2 fa-lg"></i>
               </div>
-              <div class="d-flex flex-row">
-                <div class="p-2 p-md-3 p-lg-4 align-self-start">
-                  <i class="fa fa-code bg-secondary p-2 fa-lg"></i>
-                </div>
-                <div class="p-2 p-md-3 p-lg-4 align-self-end">
-                  Loops and fragments design for <strong>Game Dynamic Music Programming</strong>.
-                </div>
-              </div>
-              <div class="d-flex flex-row">
-                <div class="p-2 p-md-3 p-lg-4 align-self-start">
-                  <i class="fa fa-volume-up bg-secondary p-2 fa-lg"></i>
-                </div>
-                <div class="p-2 p-md-3 p-lg-4 align-self-end">
-                  <strong>Audio / Music</strong> consulting services for game development.
-                </div>
+              <div class="p-2 p-md-3 p-lg-4 align-self-end">
+                Music production, composition and orchestration for <strong>Films and TV</strong>.
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="card bg-secondary text-center card-form">
-                <div class="card-body">
-                  <h2 class="h3">Featured Music</h2>
+            <div class="d-flex flex-row">
+              <div class="p-2 p-md-3 p-lg-4 align-self-start">
+                <i class="fa fa-code bg-secondary p-2 fa-lg"></i>
+              </div>
+              <div class="p-2 p-md-3 p-lg-4 align-self-end">
+                Loops and fragments design for <strong>Game Dynamic Music Programming</strong>.
+              </div>
+            </div>
+            <div class="d-flex flex-row">
+              <div class="p-2 p-md-3 p-lg-4 align-self-start">
+                <i class="fa fa-volume-up bg-secondary p-2 fa-lg"></i>
+              </div>
+              <div class="p-2 p-md-3 p-lg-4 align-self-end">
+                <strong>Audio / Music</strong> consulting services for game development.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card bg-secondary text-center card-form">
+              <div class="card-body">
+                <h2 class="h3">Featured Music</h2>
+                <div class="container-fluid row justify-content-center" *ngIf="loadingFeatured">
+                  <div class="loader text-light border-secondary rounded-circle"></div>
+                </div>
+                <div class="container-fluid row" class="" *ngIf="!loading">
+
+                  <div id="featured-tracks"class="row" *ngFor="let fprod of this.dataService.featuredMusic.prods">
+                    <div class="col-3">
+                      <img data-toggle="tooltip" data-placement="top" src="{{fprod.image}}" alt="{{fprod.title}} {{fprod.field_format}} {{fprod.field_inst}}" title="{{fprod.title}} {{fprod.field_format}} {{fprod.field_inst}}" class="img-fluid mb-3 rounded-circle mw-30">
+                    </div>
+                    <div class="col9">
+                      <app-track *ngFor="let ftrack of fprod.tracks" [Track]="ftrack">
+                      </app-track>
+                    </div>
+
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -41,17 +57,13 @@
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 <div class="container-fluid row justify-content-center" *ngIf="loading">
-  <div class="loader text-light border-secondary rounded-circle" ></div>
+  <div class="loader text-light border-secondary rounded-circle"></div>
 </div>
 
-  <div class="container"  class="list-group-item bg-secondary text-light" *ngIf="!loading">
-    <!-- <span class="badge badge-success">{{prod.type}} </span> {{prod.attributes.nid}}
-    <h3>{{prod.attributes.title}}</h3>
-    <div *ngIf="prod.attributes.body" [innerHTML]="prod.attributes.body.value"></div> -->
-    <app-production *ngFor="let prod of dataService.landingProductions.data;let index = index;" [Prod]="prod" [Id]="prod.id">
-    </app-production>
-
-
+<div class="container" class="" *ngIf="!loading">
+  <app-production *ngFor="let prod of dataService.landingProductions.data;let index = index;" [Prod]="prod" [Id]="prod.id" [Index]="index">
+  </app-production>
 </div>
