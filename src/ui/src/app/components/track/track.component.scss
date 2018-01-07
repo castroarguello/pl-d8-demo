@@ -1,22 +1,66 @@
 @keyframes playingAnimation {
-  0%   { opacity:0.8; box-shadow: none;}
-  50%  { opacity:0.6;box-shadow: inset 0px 0px 1px 2px lightgrey;}
-  100% { opacity:0.8;box-shadow: none;}
+  0% {
+    opacity: 0.8;
+    box-shadow: none;
+  }
+
+  50% {
+    opacity: 0.6;
+    box-shadow: inset 0 0 1px 2px lightgrey;
+  }
+
+  100% {
+    opacity: 0.8;
+    box-shadow: none;
+  }
 }
-@-o-keyframes playingAnimation{
-  0%   { opacity:0.8; box-shadow: none;}
-  50%  { opacity:0.6;box-shadow: inset 0px 0px 1px 2px lightgrey;}
-  100% { opacity:0.8;box-shadow: none;}
+@-o-keyframes playingAnimation {
+  0% {
+    opacity: 0.8;
+    box-shadow: none;
+  }
+
+  50% {
+    opacity: 0.6;
+    box-shadow: inset 0 0 1px 2px lightgrey;
+  }
+
+  100% {
+    opacity: 0.8;
+    box-shadow: none;
+  }
 }
-@-moz-keyframes playingAnimation{
-  0%   { opacity:0.8; box-shadow: none;}
-  50%  { opacity:0.6;box-shadow: inset 0px 0px 1px 2px lightgrey;}
-  100% { opacity:0.8;box-shadow: none;}
+@-moz-keyframes playingAnimation {
+  0% {
+    opacity: 0.8;
+    box-shadow: none;
+  }
+
+  50% {
+    opacity: 0.6;
+    box-shadow: inset 0 0 1px 2px lightgrey;
+  }
+
+  100% {
+    opacity: 0.8;
+    box-shadow: none;
+  }
 }
-@-webkit-keyframes playingAnimation{
-  0%   { opacity:0.8; box-shadow: none;}
-  50%  { opacity:0.6;box-shadow: inset 0px 0px 1px 2px lightgrey;}
-  100% { opacity:0.8;box-shadow: none;}
+@-webkit-keyframes playingAnimation {
+  0% {
+    opacity: 0.8;
+    box-shadow: none;
+  }
+
+  50% {
+    opacity: 0.6;
+    box-shadow: inset 0 0 1px 2px lightgrey;
+  }
+
+  100% {
+    opacity: 0.8;
+    box-shadow: none;
+  }
 }
 
 .br-5 {
@@ -24,7 +68,8 @@
 }
 
 .track-title {
-  max-width: 180px;
+  font-size: 80%;
+  max-width: 183px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -39,5 +84,16 @@
   -webkit-animation: playingAnimation 2s infinite;
   -moz-animation: playingAnimation 2s infinite;
   -o-animation: playingAnimation 2s infinite;
-   animation: playingAnimation 2s infinite;
+  animation: playingAnimation 2s infinite;
+}
+@media (min-width: 320px) {
+  .track-title {
+    font-size: 100%;
+    max-width: 250px;
+  }
+}
+@media (min-width: 576px) {
+  .track-title {
+    max-width: 350px;
+  }
 }

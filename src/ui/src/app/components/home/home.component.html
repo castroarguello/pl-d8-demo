@@ -5,6 +5,7 @@
         <div class="row pt-2 pt-lg-5">
           <div class="services col-lg-6">
             <h1 class="display-5 d-none d-lg-block" [innerHTML]="title"></h1>
+            <p class="years small text-left d-none d-lg-block">17+ years in Entertainment Industry</p>
             <div class="d-flex flex-row">
               <div class="p-2 p-md-3 p-lg-4 align-self-start">
                 <i class="fa fa-film bg-secondary p-2 fa-lg"></i>
@@ -30,29 +31,26 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="card bg-secondary text-center card-form">
-              <div class="card-body">
-                <h2 class="h3">Featured Music</h2>
-                <div class="container-fluid row justify-content-center" *ngIf="loadingFeatured">
-                  <div class="loader text-light border-secondary rounded-circle"></div>
-                </div>
-                <div class="container-fluid row" class="" *ngIf="!loading">
-
-                  <div id="featured-tracks"class="row" *ngFor="let fprod of this.dataService.featuredMusic.prods">
-                    <div class="col-3">
-                      <img data-toggle="tooltip" data-placement="top" src="{{fprod.image}}" alt="{{fprod.title}} {{fprod.field_format}} {{fprod.field_inst}}" title="{{fprod.title}} {{fprod.field_format}} {{fprod.field_inst}}" class="img-fluid mb-3 rounded-circle mw-30">
-                    </div>
-                    <div class="col9">
-                      <app-track *ngFor="let ftrack of fprod.tracks" [Track]="ftrack">
-                      </app-track>
-                    </div>
-
+          <div class="featured col-lg-6">
+            <h2 class="h3 d-none d-lg-block text-center"><strong >Featured Music</strong></h2>
+              <div class="card bg-secondary text-center card-form row mb-2 p-1" *ngFor="let fprod of this.dataService.featuredMusic.prods">
+                <div class="card-body p-2">
+                  <div class="container-fluid row justify-content-center" *ngIf="loadingFeatured">
+                    <div class="loader text-light border-secondary rounded-circle"></div>
                   </div>
-
+                  <div class="container-fluid" class="" *ngIf="!loading">
+                    <div class="featured-track d-flex flex-row" >
+                      <img src="{{fprod.image}}" alt="{{fprod.title}} {{fprod.field_format}} {{fprod.field_inst}}" title="{{fprod.title}} {{fprod.field_format}} {{fprod.field_inst}}" class="img-fluid rounded-circle align-self-start">
+                      <div class="align-self-end pl-4">
+                        <h3 class="mb-1"><strong>{{fprod.title}}</strong> <span class="badge badge-dark ml-1">{{fprod.field_format}}</span> <span class="badge badge-dark">{{fprod.field_inst}}</span></h3>
+                        <app-track *ngFor="let ftrack of fprod.tracks" [Track]="ftrack">
+                        </app-track>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+
           </div>
         </div>
       </div>

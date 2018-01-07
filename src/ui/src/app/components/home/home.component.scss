@@ -1,64 +1,74 @@
-
 .loader {
-    border: 5px solid #f3f3f3;
-    -webkit-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
-    border-top: 5px solid white !important;
-    width: 50px;
-    height: 50px;
+  border: 5px solid #f3f3f3;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  border-top: 5px solid white !important;
+  width: 50px;
+  height: 50px;
 }
-
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-#home-section{
-  background:url('../../../assets/img/home-sheet.jpg') no-repeat;
-  min-height:500px;
-  background-size:cover;
-  background-attachment:fixed;
+#home-section {
+  background: url("../../../assets/img/home-sheet.jpg") no-repeat;
+  min-height: 600px;
+  background-size: cover;
+  background-attachment: fixed;
 
+  .years {
+    margin-top: -13px;
+  }
 
-  .dark-overlay{
-    background-color:rgba(0,0,0,0.5);
-    position:absolute;
-    top:0;
+  .dark-overlay {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
     left: 0;
-    width:100%;
-    min-height:500px;
+    width: 100%;
+    min-height: 600px;
   }
 
-  .card-form{
-    opacity:0.8;
+  .card-form {
+    opacity: 0.8;
   }
 
-  .fa{
-    color:white;
-    border-radius:5px;
+  .fa {
+    color: white;
+    border-radius: 5px;
   }
 
-#featured-tracks {
-  img {
-    max-width: 100px;
-  }
-  .track-container  {
-    .track-play, .track-tile {
-      padding-top:0.25rem;
-      padding-bottom: 0.25rem;
+  .featured-track {
+    h3 {
+      font-size: 1rem;
+    }
+    img {
+      max-width: 80px;
     }
 
+    .track-container {
+      .track-play,
+      .track-tile {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+    }
   }
-}
-
-// Dinamic Font size.
+  // Dinamic Font size.
   .services {
     font-size: 70%;
   }
-  .card-body, h2:not(.h3) {
-    font-size: 80%;
 
+  .card-body {
+    font-size: 80%;
   }
+
   h2.h3 {
     font-size: 1.25rem;
   }
@@ -66,16 +76,31 @@
     h2.h3 {
       font-size: 1.55rem;
     }
-    .services, .card-body, h2:not(.h3) {
+
+    .card-body,
+    .services {
       font-size: 90%;
     }
   }
   @media (min-width: 576px) {
-    .services, .card-body, h2:not(.h3) {
+    .featured-track {
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
+    .card-body,
+    .services {
       font-size: 100%;
     }
+
     h2.h3 {
       font-size: 1.75rem;
+    }
+  }
+  @media (min-width: 992px) {
+    min-height: 500px;
+    .dark-overlay {
+      min-height: 500px;
     }
   }
 }
