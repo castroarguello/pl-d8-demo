@@ -12,10 +12,11 @@ import { AudioPlayerService } from './services/audio/audio-player.service';
 import { DataService } from './services/data.service';
 import { TrackComponent } from './components/track/track.component';
 import { ProductionComponent } from './components/production/production.component';
+import { ComposerComponent } from './components/composer/composer.component';
 
 const routes: Routes = [
-  //{ path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '', component: HomeComponent },
+  { path: 'composer/:pathAlias', component: ComposerComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -25,7 +26,8 @@ const routes: Routes = [
     NotFoundComponent,
     HomeComponent,
     TrackComponent,
-    ProductionComponent
+    ProductionComponent,
+    ComposerComponent
   ],
   imports: [
     BrowserModule,

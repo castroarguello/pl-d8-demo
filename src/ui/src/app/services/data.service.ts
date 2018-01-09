@@ -10,9 +10,12 @@ export class DataService {
   private backendRoot: string = 'http://172.17.0.4';
   private apiRoot: string = 'http://172.17.0.4/jsonapi/node/';
   Prods: Object[] = [];
+  Composers: string[] = [];
   featuredMusic: any;
 
   constructor(private http: Http) {
+    this.Composers['german-martin'] = '1';
+    this.Composers['gerardo-colinas'] = '3';
   }
 
   private execRequest(endPoint: string, key: any): Promise<Object> {
@@ -42,10 +45,8 @@ export class DataService {
 
   getNodes(contentType: string): Promise<Object> {
     // Build Jsonapi url.
-    var node_fields = contentType + "?fields[node--" + contentType + "]=nid,title,field_tracks,body";
-    var relations = "&include=field_tracks,field_tracks.field_audio";
-    var paragraph_fields = "&fields[paragraph--track]=field_audio,field_title&fields[file--file]=url";
-    var apiURL = this.apiRoot + node_fields + relations + paragraph_fields;
+    var node_fields = contentType + "?fields[node--" + contentType + "]=nid,title,body";
+    var apiURL = this.apiRoot + node_fields;
     // Execute request.
     return this.execRequest(apiURL, contentType);
   }
@@ -58,6 +59,19 @@ export class DataService {
     var apiURL = this.apiRoot + node_fields + filters;
     // Execute request.
     return this.execRequest(apiURL, 'landingProductions');
+  }
+
+  getComposerProductions(composerAlias: string): Promise<Object> {
+    // Build Jsonapi url.
+    let composerId = this.Composers[composerAlias];
+    var contentType = 'produccion';
+    var node_fields = contentType + "?fields[node--" + contentType + "]=nid,field_compositor,title,body,field_format,field_inst";
+    var filters = "&filter[status][value]=1&filter[promote][value]=1$filter[sticky][value]=0";
+    var relations = "&include=field_compositor";
+    var composerfilters = "&filter[field_compositor.nid][value]=" + composerId + "&sort=-created";
+    var apiURL = this.apiRoot + node_fields + relations + filters + composerfilters;
+    // Execute request.
+    return this.execRequest(apiURL, composerAlias);
   }
 
   getSingleProduction(id: string): Promise<Object> {

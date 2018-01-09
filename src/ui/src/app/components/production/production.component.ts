@@ -16,24 +16,22 @@ export class ProductionComponent implements OnInit {
   Image: string;
   Classes: string = '';
 
+  constructor(private dataService: DataService) { }
 
-
-constructor(private dataService: DataService) { }
-
-ngOnInit() {
-  this.loading = true;
-  this.dataService.getSingleProduction(this.Id).then(() => {
-    this.Tracks = this.dataService.Prods[this.Id].tracks;
-    this.Image = this.dataService.Prods[this.Id].image;
-    this.loading = false;
+  ngOnInit() {
+    this.loading = true;
+    this.dataService.getSingleProduction(this.Id).then(() => {
+      this.Tracks = this.dataService.Prods[this.Id].tracks;
+      this.Image = this.dataService.Prods[this.Id].image;
+      this.loading = false;
     }
-  );
-  if (this.Index%2) {
-    this.Classes= "bg-secondary text-light";
+    );
+    if (this.Index % 2) {
+      this.Classes = "bg-secondary text-light";
+    }
+    else {
+      this.Classes = "bg-darkergrey text-light";
+    }
   }
-  else {
-    this.Classes= "bg-darkergrey text-light";
-  }
-}
 
 }
