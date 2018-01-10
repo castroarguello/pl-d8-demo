@@ -33,13 +33,19 @@
           </div>
           <div class="featured col-lg-6">
             <h2 class="h3 d-none d-lg-block text-center"><strong >Featured Music</strong></h2>
+
+            <div class="container-fluid row justify-content-center" *ngIf="loadingFeatured">
+              <div class="loader text-light border-secondary rounded-circle"></div>
+            </div>
+
+            <div class="container" class="" *ngIf="!loadingFeatured">
               <div class="card bg-secondary text-center card-form row mb-2 p-1" *ngFor="let fprod of this.dataService.featuredMusic.prods">
                 <div class="card-body p-2">
                   <div class="container-fluid row justify-content-center" *ngIf="loadingFeatured">
                     <div class="loader text-light border-secondary rounded-circle"></div>
                   </div>
                   <div class="container-fluid" class="" *ngIf="!loadingFeatured">
-                    <div class="featured-track d-flex flex-row" >
+                    <div class="featured-track d-flex flex-row">
                       <img src="{{fprod.image}}" alt="{{fprod.title}} {{fprod.field_format}} {{fprod.field_inst}}" title="{{fprod.title}} {{fprod.field_format}} {{fprod.field_inst}}" class="img-fluid rounded-circle align-self-start">
                       <div class="align-self-end pl-4">
                         <h3 class="mb-1"><strong>{{fprod.title}}</strong> <span class="badge badge-dark ml-1">{{fprod.field_format}}</span> <span class="badge badge-dark">{{fprod.field_inst}}</span></h3>
@@ -50,7 +56,7 @@
                   </div>
                 </div>
               </div>
-
+            </div>
           </div>
         </div>
       </div>
@@ -62,6 +68,6 @@
 </div>
 
 <div class="container" class="" *ngIf="!loading">
-  <app-production *ngFor="let prod of dataService.landingProductions.data;let index = index;" [Prod]="prod" [Id]="prod.id" [Index]="index">
+  <app-production *ngFor="let prod of dataService.landingProductions.data;let index = index;" [Prod]="prod" [Id]="prod.id" [Index]="index" [isHome]="true">
   </app-production>
 </div>

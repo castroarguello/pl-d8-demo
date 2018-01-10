@@ -14,6 +14,7 @@ interface TrackObject{
 })
 export class TrackComponent implements OnInit {
   @Input() Track: TrackObject;
+  @Input() isHome: boolean;
   cClass: string = '';
 
   constructor(private player: AudioPlayerService, private renderer: Renderer2) {

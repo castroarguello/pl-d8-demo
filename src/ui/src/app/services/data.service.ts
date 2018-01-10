@@ -4,7 +4,6 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { HttpModule, Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 
-
 @Injectable()
 export class DataService {
   private backendRoot: string = 'http://172.17.0.4';
@@ -133,7 +132,6 @@ export class DataService {
         .then(
         res => { // Success
           this.featuredMusic.prods = [];
-          console.log(this.featuredMusic);
           let i = -1;
           // Iterates productions.
           this.featuredMusic.data.forEach((singleprod) => {

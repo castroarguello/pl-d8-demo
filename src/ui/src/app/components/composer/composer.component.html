@@ -2,8 +2,8 @@
   <div class="loader text-light border-secondary rounded-circle"></div>
 </div>
 <div class="container" class="" *ngIf="!loading">
-  <div class="" *ngFor="let Production of this.dataService[this.Alias].data">
-    <app-production [Prod]="Production" [Id]="Production.id" [Index]="index">
+  <div class="" *ngFor="let Production of this.dataService[this.Alias].data;let index = index;">
+    <app-production [Prod]="Production" [Id]="Production.id" [Index]="index" [isHome]="false">
     </app-production>
   </div>
 </div>

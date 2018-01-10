@@ -12,12 +12,10 @@ export class ComposerComponent implements OnInit {
   private loading: boolean;
 
   constructor(private router: ActivatedRoute, private dataService: DataService) {
-    //this.Alias = this.router.snapshot.params['pathAlias'];
   }
 
   ngOnInit() {
     this.loading = true;
-
     this.router.params.subscribe(res => {
       this.Alias = res['pathAlias'];
       this.dataService.getComposerProductions(this.Alias).then(() => this.loading = false);

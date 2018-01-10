@@ -11,6 +11,7 @@ export class ProductionComponent implements OnInit {
   @Input() Prod: Object;
   @Input() Id: string;
   @Input() Index: number;
+  @Input() isHome: boolean;
   loading: boolean = true;
   Tracks: Object[];
   Image: string;

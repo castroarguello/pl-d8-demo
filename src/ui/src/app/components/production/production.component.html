@@ -10,7 +10,7 @@
         <div class="loader text-light border-secondary rounded-circle"></div>
       </div>
       <div class="container-fluid row" *ngIf="!loading">
-        <app-track class="col-md-12" *ngFor="let track of Tracks" [Track]="track">
+        <app-track class="col-md-12" *ngFor="let track of Tracks" [Track]="track" [isHome]="isHome">
         </app-track>
       </div>
     </div>
