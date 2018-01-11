@@ -1,0 +1,67 @@
+#composer-section {
+  background: url("../../../assets/img/composer-header.jpg") no-repeat;
+  min-height: 350px;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .dark-overlay {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 350px;;
+  }
+
+  .card-form {
+    opacity: 0.8;
+  }
+
+  .card-body {
+    font-size: 75%;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+.check {
+  position: absolute;
+  bottom: 8px;
+}
+  @media (min-width: 320px) {
+    .card-body {
+      font-size: 80%;
+    }
+  }
+  @media (min-width: 576px) {
+    .card-body {
+      font-size: 95%;
+    }
+    h1 {
+      font-size: 1.75rem;
+    }
+    h2 {
+      font-size: 1.55rem;
+    }
+    .check {
+      bottom: 10px;
+    }
+  }
+  @media (min-width: 768px) {
+    .card-body {
+      font-size: 100%;
+    }
+    h1 {
+      font-size: 1.95rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+    .check {
+      bottom: 15px;
+    }
+  }
+}

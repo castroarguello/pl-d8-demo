@@ -9,6 +9,7 @@ import { DataService } from '../../services/data.service';
 })
 export class ComposerComponent implements OnInit {
   Alias: string = '';
+  Composer: Object;
   private loading: boolean;
 
   constructor(private router: ActivatedRoute, private dataService: DataService) {
@@ -18,7 +19,11 @@ export class ComposerComponent implements OnInit {
     this.loading = true;
     this.router.params.subscribe(res => {
       this.Alias = res['pathAlias'];
-      this.dataService.getComposerProductions(this.Alias).then(() => this.loading = false);
+      this.dataService.getComposerProductions(this.Alias).then(() => {
+        this.loading = false;
+        this.Composer = this.dataService.Composers[this.Alias];
+      }
+      );
     });
   }
 

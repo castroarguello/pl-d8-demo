@@ -15,3 +15,11 @@ span.brand-name {
 #main-footer {
   background-color: #1d2023 !important;
 }
+
+.modal-body {
+  min-height: 500px;
+}
+iframe.embed-responsive-item {
+  width: 100%;
+  min-height: 500px;
+}

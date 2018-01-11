@@ -1,3 +1,31 @@
+<header id="composer-section" class="pb-5">
+  <div class="dark-overlay">
+    <div class="home-inner pt-5">
+      <div class="container">
+        <div class="container-fluid row justify-content-center" *ngIf="loading">
+          <div class="loader text-light border-secondary rounded-circle"></div>
+        </div>
+        <div class="row pt-2 pt-lg-5" *ngIf="!loading">
+          <div class="composer col-lg-4">
+            <h1 class=""><strong>{{Composer.name}}</strong></h1>
+            <h2 class="small text-left"><strong>Bio</strong></h2>
+          </div>
+          <div class="featured col-lg-8">
+            <div class="card bg-secondary text-center card-form row mb-2 p-0">
+              <div class="card-body p-0">
+                <div class="p-2 p-md-3 p-lg-4 text-justify" [innerHTML]="Composer.bio">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="check text-center"><strong>Listen some of his work!</strong></h2>
+      </div>
+
+    </div>
+
+  </div>
+</header>
 <div class="container-fluid row justify-content-center" *ngIf="loading">
   <div class="loader text-light border-secondary rounded-circle"></div>
 </div>

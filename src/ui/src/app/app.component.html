@@ -17,17 +17,31 @@
           </div>
         </li>
         <li class="nav-item">
-          <a routerLink="/contact" class="nav-link" href="#">Contact</a>
+          <a href="#myModal" data-toggle="modal" class="nav-link">Contact</a>
         </li>
       </ul>
-      <!-- <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
     </div>
 </nav>
 
 <router-outlet></router-outlet>
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="h4 text-dark">Contact us!</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+
+      <div class="modal-body embed-responsive-1by1 py-0">
+          <iframe class="embed-responsive-item" [src]="Url" frameBorder="0" scrolling="no"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer id="main-footer">
       <div class="container">
@@ -36,7 +50,7 @@
             <div class="py-4">
               <p class="navbar-brand d-inline py-0 mx-0"><img width="24" height="24" class="img-fluid ml-1" alt="-97db Logo" src="../assets/img/wave-sm.png"><span class="brand-name">97db</span><strong class="mr-1">Original Music</strong></p>
               <p class="small">Copyright © 2018</p>
-              <button class="btn btn-secondary" routerLink="/contact">Contact Us</button>
+              <button class="btn btn-secondary" href="#myModal" data-toggle="modal">Contact Us</button>
             </div>
           </div>
         </div>
