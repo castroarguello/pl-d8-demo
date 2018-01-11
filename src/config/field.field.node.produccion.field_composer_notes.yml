@@ -1,0 +1,21 @@
+uuid: c2eb47ff-fc9b-4593-8120-876ce9a4401b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_composer_notes
+    - node.type.produccion
+  module:
+    - text
+id: node.produccion.field_composer_notes
+field_name: field_composer_notes
+entity_type: node
+bundle: produccion
+label: 'Composer Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

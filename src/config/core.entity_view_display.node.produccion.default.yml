@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.produccion.body
+    - field.field.node.produccion.field_composer_notes
     - field.field.node.produccion.field_compositor
     - field.field.node.produccion.field_dir
     - field.field.node.produccion.field_elenco
@@ -37,6 +38,13 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_composer_notes:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_compositor:
     label: above

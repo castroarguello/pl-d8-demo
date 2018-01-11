@@ -1,0 +1,19 @@
+uuid: 286441d2-a390-43a6-afa9-501839c5e890
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_composer_notes
+field_name: field_composer_notes
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

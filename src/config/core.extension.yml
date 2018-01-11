@@ -26,6 +26,7 @@ module:
   kint: 0
   language: 0
   link: 0
+  m97db_contact: 0
   m97db_ld6m: 0
   menu_ui: 0
   migrate: 0

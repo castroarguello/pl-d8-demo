@@ -1,4 +1,4 @@
-default_form: consultations
+default_form: us
 flood:
   limit: 6
   interval: 3600

@@ -1,0 +1,12 @@
+uuid: c88aee58-2842-4879-a911-e26f7e62ed09
+langcode: en
+status: true
+dependencies: {  }
+id: us
+label: 'Contact Us'
+recipients:
+  - gmartin.php@gmail.com
+reply: ''
+weight: 0
+message: 'Message sent!'
+redirect: /contact-us

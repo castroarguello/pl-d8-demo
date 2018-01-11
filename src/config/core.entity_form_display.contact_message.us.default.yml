@@ -1,0 +1,41 @@
+uuid: af14af19-5b69-46ff-adc9-84e97dc96716
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.us
+id: contact_message.us.default
+targetEntityType: contact_message
+bundle: us
+mode: default
+content:
+  mail:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  message:
+    type: string_textarea
+    weight: 3
+    settings:
+      rows: 4
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  name:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  copy: true
+  langcode: true
+  preview: true
