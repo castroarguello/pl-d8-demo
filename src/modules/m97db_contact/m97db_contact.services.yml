@@ -1,0 +1,7 @@
+services:
+  m97db_contact.default:
+    class: Drupal\m97db_contact\EventSubscriber\DefaultSubscriber
+    arguments: ['@current_route_match']
+    tags:
+      - { name: event_subscriber }
+

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains m97db_contact.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function m97db_contact_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the m97db_contact module.
+    case 'help.page.m97db_contact':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Contact form custom controller for Iframe embed.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

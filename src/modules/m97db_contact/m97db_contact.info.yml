@@ -1,0 +1,5 @@
+name: m97db_contact
+type: module
+description: Contact form custom controller for Iframe embed.
+core: 8.x
+package: Custom

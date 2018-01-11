@@ -1,0 +1,6 @@
+m97db.contact:
+  path: '/contact-us'
+  defaults:
+    _controller: '\Drupal\m97db_contact\Controller\ContactController::getForm'
+  requirements:
+    _access: 'TRUE'
