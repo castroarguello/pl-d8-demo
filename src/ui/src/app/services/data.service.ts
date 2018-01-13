@@ -6,8 +6,8 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class DataService {
-  private backendRoot: string = 'http://172.17.0.4';
-  private apiRoot: string = 'http://172.17.0.4/jsonapi/node/';
+  private backendRoot: string = 'http://127.0.0.1';
+  private apiRoot: string = 'http://127.0.0.1/jsonapi/node/';
   Prods: Object[] = [];
   Composers: Object[] = [];
   featuredMusic: any;

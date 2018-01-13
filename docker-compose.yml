@@ -9,7 +9,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-www
-    network_mode: "bridge"
+    network_mode: "host"
     container_name: drupal8_www
     working_dir: /var/www/build/html
     environment:
@@ -27,8 +27,8 @@ services:
       com.dnsdock.image: "d8"
     # Links become entries in /etc/hosts We can refer to the
     # database host as db instead of db.d8.vm or IP address
-    links:
-      - db
+    # links:
+    #  - db
     # These src:dest pairs get mapped into the container at the
     # dest path and override what was built into the image. Both
     # a directory and an individual file can be overridden.
@@ -46,7 +46,7 @@ services:
   # Container to run our database
   db:
     image: phase2/mariadb
-    network_mode: "bridge"
+    network_mode: "host"
     container_name: drupal8_db
     labels:
       # The dnsdock labels make this container referenceable by db.d8.vm
@@ -62,8 +62,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-node
-    network_mode: "bridge"
+    network_mode: "host"
     working_dir: /var/www/src/ui
+    labels:
+      # The dnsdock labels make this container referenceable by node.d8.vm
+      # It is recommended that your com.dnsdock.name match your container name
+      com.dnsdock.name: "node"
+      com.dnsdock.image: "d8"
     command: npm start
     volumes:
       - .:/var/www/

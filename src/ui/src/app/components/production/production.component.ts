@@ -8,12 +8,12 @@ import { DataService } from '../../services/data.service';
   providers: [DataService]
 })
 export class ProductionComponent implements OnInit {
-  @Input() Prod: Object;
+  @Input() Prod: any;
   @Input() Id: string;
   @Input() Index: number;
   @Input() isHome: boolean;
   loading: boolean = true;
-  Tracks: Object[];
+  Tracks: any[];
   Image: string;
   Classes: string = '';
 

@@ -9,8 +9,8 @@ import { DataService } from '../../services/data.service';
 })
 export class ComposerComponent implements OnInit {
   Alias: string = '';
-  Composer: Object;
-  private loading: boolean;
+  Composer: any;
+  loading: boolean;
 
   constructor(private router: ActivatedRoute, private dataService: DataService) {
   }

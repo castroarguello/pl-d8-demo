@@ -11,8 +11,8 @@ import { DataService } from '../../services/data.service';
 
 export class HomeComponent implements OnInit {
   title = '<small>-97db</small> <strong>Original Music</strong>';
-  private loading: boolean = false;
-  private loadingFeatured: boolean = false;
+  loading: boolean = false;
+  loadingFeatured: boolean = false;
   constructor(private dataService: DataService) { }
 
   getProds(): void {
