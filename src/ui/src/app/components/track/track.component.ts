@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AudioPlayerService } from '../../services/audio/audio-player.service';
 import { Renderer2 } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 interface TrackObject{
-    url: string;
+    url: SafeResourceUrl;
     field_title: string;
 }
 

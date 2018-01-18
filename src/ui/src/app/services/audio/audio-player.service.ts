@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Howl } from 'howler';
 import { Renderer2 } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Injectable()
 export class AudioPlayerService {
@@ -8,13 +9,13 @@ export class AudioPlayerService {
   public Track: Howl = null;
   public Title: string;
   public Target: any;
-  public Url: string;
+  public Url: SafeResourceUrl;
   private renderer: Renderer2;
 
   constructor() {
   }
 
-  play(audioUrl: string, trackTitle: string, domTarget: any, renderer: Renderer2) {
+  play(audioUrl: SafeResourceUrl, trackTitle: string, domTarget: any, renderer: Renderer2) {
 
     // Replay the last track.
     if (this.Url == audioUrl) {

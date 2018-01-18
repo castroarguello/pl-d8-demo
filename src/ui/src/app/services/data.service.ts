@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { HttpModule, Http, Response } from '@angular/http';
 import 'rxjs/Rx';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Injectable()
 export class DataService {
@@ -12,7 +13,7 @@ export class DataService {
   Composers: Object[] = [];
   featuredMusic: any;
 
-  constructor(private http: Http) {
+  constructor(private http: Http, private san:DomSanitizer) {
     this.Composers['german-martin'] = {nid: '1'};
     this.Composers['gerardo-colinas'] = {nid: '3'};
   }
@@ -173,7 +174,7 @@ getFeaturedMusic(): Promise < Object > {
               if (audioContent) {
                 j = j + 1;
                 this.featuredMusic.prods[i].tracks[j] = trackContent.attributes;
-                this.featuredMusic.prods[i].tracks[j].url = this.backendRoot + audioContent.attributes.url;
+                this.featuredMusic.prods[i].tracks[j].url = this.san.bypassSecurityTrustResourceUrl(this.backendRoot + audioContent.attributes.url);
                 this.featuredMusic.prods[i].tracks[j].class = 'text-white';
               }
             }

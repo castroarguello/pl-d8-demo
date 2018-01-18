@@ -1,0 +1,42 @@
+{
+  "index": "/index.html",
+  "assetGroups": [{
+    "name": "app",
+    "installMode": "prefetch",
+    "resources": {
+      "files": [
+        "/favicon.ico",
+        "/index.html"
+      ],
+      "versionedFiles": [
+        "/*.bundle.css",
+        "/*.bundle.js",
+        "/*.chunk.js"
+      ]
+    }
+  }, {
+    "name": "assets",
+    "installMode": "lazy",
+    "updateMode": "lazy",
+    "resources": {
+      "files": [
+        "/assets/**"
+      ],
+      "urls": [
+        "http://127.0.0.1/sites/default/files/track-audio/**"
+      ]
+    }
+  }],
+  "dataGroups": [
+  {
+    "name": "d8-api",
+    "urls": ["http://127.0.0.1/jsonapi/node/**"],
+    "cacheConfig": {
+      "strategy": "freshness",
+      "maxSize": 20,
+      "maxAge": "1h",
+      "timeout": "5s"
+    }
+  }
+]
+}
