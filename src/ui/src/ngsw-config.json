@@ -16,21 +16,22 @@
     }
   }, {
     "name": "assets",
-    "installMode": "lazy",
+    "installMode": "prefetch",
     "updateMode": "lazy",
     "resources": {
       "files": [
         "/assets/**"
       ],
       "urls": [
-        "http://127.0.0.1/sites/default/files/track-audio/**"
+        "/html/sites/default/files/track-audio/**",
+	      "/html/sites/default/files/**"
       ]
     }
   }],
   "dataGroups": [
   {
     "name": "d8-api",
-    "urls": ["http://127.0.0.1/jsonapi/node/**"],
+    "urls": ["/html/jsonapi/node/**"],
     "cacheConfig": {
       "strategy": "freshness",
       "maxSize": 20,

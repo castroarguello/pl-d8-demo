@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
+  backendRoot: 'http://127.0.0.1/',
+  apiRoot: 'http://127.0.0.1/html/jsonapi/node/',
   production: false
 };

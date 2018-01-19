@@ -32,18 +32,18 @@ export class AudioPlayerService {
     if (this.Track && this.Track.playing()) {
       this.stopTrack();
     }
-    if (this.Tracks[audioUrl]) {
-      this.Track = this.Tracks[audioUrl];
+    if (this.Tracks[audioUrl.toString()]) {
+      this.Track = this.Tracks[audioUrl.toString()];
     }
     else {
       this.Track = new Howl({
-        src: [audioUrl],
+        src: [audioUrl.toString()],
         html5: true
       });
       this.Track.on('end', () => {
         this.stopTrack();
       });
-      this.Tracks[audioUrl] = this.Track;
+      this.Tracks[audioUrl.toString()] = this.Track;
     }
     this.Title = trackTitle;
     this.Target = domTarget;

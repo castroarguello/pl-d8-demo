@@ -4,16 +4,19 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { HttpModule, Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class DataService {
-  private backendRoot: string = 'http://127.0.0.1';
-  private apiRoot: string = 'http://127.0.0.1/jsonapi/node/';
+  private backendRoot: string = '';
+  private apiRoot: string = '';
   Prods: Object[] = [];
   Composers: Object[] = [];
   featuredMusic: any;
 
   constructor(private http: Http, private san:DomSanitizer) {
+    this.backendRoot = environment.backendRoot;
+    this.apiRoot = environment.apiRoot;
     this.Composers['german-martin'] = {nid: '1'};
     this.Composers['gerardo-colinas'] = {nid: '3'};
   }
@@ -174,7 +177,7 @@ getFeaturedMusic(): Promise < Object > {
               if (audioContent) {
                 j = j + 1;
                 this.featuredMusic.prods[i].tracks[j] = trackContent.attributes;
-                this.featuredMusic.prods[i].tracks[j].url = this.san.bypassSecurityTrustResourceUrl(this.backendRoot + audioContent.attributes.url);
+                this.featuredMusic.prods[i].tracks[j].url = this.backendRoot + audioContent.attributes.url;
                 this.featuredMusic.prods[i].tracks[j].class = 'text-white';
               }
             }

@@ -13,7 +13,7 @@ services:
     container_name: drupal8_www
     working_dir: /var/www/build/html
     environment:
-      DOCROOT: /var/www/build/html
+      DOCROOT: /var/www/build/
       # Change some core container settings
       PHP_MAX_EXECUTION_TIME: 45
       PHP_MEMORY_LIMIT: 768M
@@ -23,7 +23,7 @@ services:
     labels:
       # The dnsdock labels make this container referenceable by www.d8.vm
       # It is recommended that your com.dnsdock.name match your container name
-      com.dnsdock.name: "www"
+      com.dnsdock.name: "local"
       com.dnsdock.image: "d8"
     # Links become entries in /etc/hosts We can refer to the
     # database host as db instead of db.d8.vm or IP address

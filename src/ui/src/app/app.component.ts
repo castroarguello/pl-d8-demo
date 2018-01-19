@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Renderer2 } from '@angular/core';
 import { AudioPlayerService } from './services/audio/audio-player.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,6 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
     //this.Iframe = this.san.bypassSecurityTrustHtml('<iframe class="embed-responsive-item" src="http://172.17.0.4/contact-us"></iframe>') ;
-    this.Url = this.san.bypassSecurityTrustResourceUrl('http://127.0.0.1/contact-us');
+    this.Url = this.san.bypassSecurityTrustResourceUrl(environment.backendRoot + '/html/contact-us');
   }
 }
